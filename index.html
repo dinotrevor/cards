@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<title>Z-Red Art</title>
+<meta charset = "utf8">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+<meta name = "Description" content = "This is a project for e-commerce."/>
+<link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+	<div id="wrapper">
+	<header id="hidden" style="display:none;">
+		<h1 id="heading">Cosmos Casino</h1>
+		<input class = "inputStyle" id = "userInput" type = "text" placeholder = "Enter Username Here">
+		<h2></h2>
+		<button id = "start" class = "button-64" role = "button" value ="submit" onclick = "multiply1()"><span class = "text">Start</span></button>
+		
+		<div id = "results" class = "results">
+	
+		</div>
+	</header>	
+		<main>
+		<div id="hands">
+		<div id="shows" style="display:block">
+		<h2 id="title">
+		Your Hand
+		</h2>
+		<div class="show">
+		<p id="card1" class="cardText"></p>
+		</div>
+		<div class="show">
+		<p id="card2" class="cardText"></p>
+		</div>
+		<div class="show">
+		<p id="card3" class="cardText"></p>
+		</div>
+		<div class="show">
+		<p id="card4" class="cardText"></p>
+		</div>
+		<div class="show">
+		<p id="card5" class="cardText"></p>
+		</div>
+		</div>
+		
+		<div id="shows3" style="display:none">
+		<h2 id="title3">
+		Total:
+		</h2>
+		<div class="total">
+		<p>Your total</p>
+		<p id="card11" class="cardText"></p>
+		<p>Opponents total</p>
+		<p id="card12" class="cardText"></p>
+		<p id="card13" class="cardText"></p>
+		</div>
+		</div>
+		
+		
+		<div id="shows2" style="display:block">
+		<h2 id="title2">
+		Opponents Hand
+		</h2>
+		<div class="show1">
+		<p id="card6" class="cardText"></p>
+		</div>
+		<div class="show1">
+		<p id="card7" class="cardText"></p>
+		</div>
+		<div class="show1">
+		<p id="card8" class="cardText"></p>
+		</div>
+		<div class="show1">
+		<p id="card9" class="cardText"></p>
+		</div>
+		<div class="show1">
+		<p id="card10" class="cardText"></p>
+		</div>
+		</div>
+		
+		
+		<div id="deck">
+		<button id = "start" class = "button-64" role = "button"
+		value ="submit" onclick = "multiply2()">
+		(Start)</button>
+		</div>
+		</div>
+		</main>
+	
+	</div>
+	
+	<script>
+	function multiply1() {
+	var liq = document.getElementById('hidden');
+	var shows = document.getElementById('shows');
+	var displaySetting = liq.style.display;
+    var displaySetting2 = shows.style.display;
+	if (displaySetting == 'block') {
+   
+      liq.style.display = 'none';
+
+    }
+    else {
+      liq.style.display = 'block';
+    }
+	
+	
+    if (displaySetting2 == 'block') {
+   
+	  shows.style.display = 'none';
+
+    }
+    else {
+      shows.style.display = 'block';
+    }
+	
+	}
+	
+	function multiply2() {
+	var liq = document.getElementById('shows3');
+	var displaySetting = liq.style.display;
+	if (displaySetting == 'block') {
+   
+      liq.style.display = 'none';
+
+    }
+    else {
+     liq.style.display = 'block';
+	document.getElementById("card1").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card2").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card3").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card4").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card5").innerHTML = Math.floor(Math.random() * 15) + 1;
+	
+	document.getElementById("card6").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card7").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card8").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card9").innerHTML = Math.floor(Math.random() * 15) + 1;
+	document.getElementById("card10").innerHTML = Math.floor(Math.random() * 15) + 1;
+	var disp = parseInt(document.getElementById("card1").innerHTML);
+	var disp2 = parseInt(document.getElementById("card2").innerHTML);
+	var disp3 = parseInt(document.getElementById("card3").innerHTML);
+	var disp4 = parseInt(document.getElementById("card4").innerHTML);
+	var disp5 = parseInt(document.getElementById("card5").innerHTML);
+	var dispa = disp + disp2 + disp3 + disp4 + disp5
+    document.getElementById("card11").innerHTML = dispa;
+	var disp6 = parseInt(document.getElementById("card6").innerHTML);
+	var disp7 = parseInt(document.getElementById("card7").innerHTML);
+	var disp8 = parseInt(document.getElementById("card8").innerHTML);
+	var disp9 = parseInt(document.getElementById("card9").innerHTML);
+	var disp10 = parseInt(document.getElementById("card10").innerHTML);
+	var dispb = disp6 + disp7 + disp8 + disp9 + disp10;
+    document.getElementById("card12").innerHTML = dispb;
+		if (dispa > dispb) {
+		document.getElementById("card13").innerHTML = "You win!";
+		}
+		else {
+		document.getElementById("card13").innerHTML = "You lose!";
+		}
+	}
+	}
+	
+	
+</script>
+</body>
+</html>
