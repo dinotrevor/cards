@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<title>Z-Red Art</title>
+<meta charset = "utf8">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1" />
+<meta name = "Description" content = "This is a project, that is a game."/>
+<link rel = "stylesheet" href = "style.css">
+</head>
+
+<body>
+<div id="wrapper">
+  <header>
+    <h1 id="heading">Wilderness Warriors</h1>
+    <h2></h2>
+    <!--<button id = "start" class = "button-64" role = "button" value ="submit" onclick = "multiply1()"><span class = "text">Start</span></button>-->
+    <div id = "results" class = "results"></div>
+  </header>
+  <main>
+    <div id="hands">
+      <div id="shows" style="display:block">
+        <h2 id="title">Your Hand</h2>
+        <div class="show">
+          <p id="card1" class="cardText"></p>
+        </div>
+        <div class="show">
+          <p id="card2" class="cardText"></p>
+        </div>
+        <div class="show">
+          <p id="card3" class="cardText"></p>
+        </div>
+        <div class="show">
+          <p id="card4" class="cardText"></p>
+        </div>
+        <div class="show">
+          <p id="card5" class="cardText"></p>
+        </div>
+      </div>
+      <div id="shows3" style="display:none">
+        <h2 id="title3">Total:</h2>
+        <div class="total">
+          <p>Your total</p>
+          <p id="card11" class="cardText"></p>
+          <p>Opponents total</p>
+          <p id="card12" class="cardText"></p>
+          <p id="card13" class="cardText"></p>
+        </div>
+      </div>
+      <div id="shows2" style="display:block">
+        <h2 id="title2">Opponents Hand</h2>
+        <div class="show1">
+          <p id="card6" class="cardText common"></p>
+        </div>
+        <div class="show1">
+          <p id="card7" class="cardText common"></p>
+        </div>
+        <div class="show1">
+          <p id="card8" class="cardText common"></p>
+        </div>
+        <div class="show1">
+          <p id="card9" class="cardText common"></p>
+        </div>
+        <div class="show1">
+          <p id="card10" class="cardText common"></p>
+        </div>
+      </div>
+    </div>
+    <div id="deck">
+      <button id = "start" class = "button-64" role = "button"
+				value ="submit" onclick = "multiply1()"> (New<br>
+      Hand)</button>
+      <button id = "start2" class = "button-64" role = "button"
+				value ="submit" onclick = "multiply2()"> (Battle)</button>
+    </div>
+  </main>
+  <footer>
+    <div id="scoreboard">
+      <div id="names">
+        <div id="player1"></div>
+        <div id="player2"></div>
+      </div>
+      <div id="scores">
+        <div id="score1"></div>
+        <div id="score2"></div>
+      </div>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

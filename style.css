@@ -1,0 +1,152 @@
+/* CSS Document */
+/*Theme Colors
+
+mediumaquamarine
+darksalmon
+darkmagenta
+*/
+*, *:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Courier New', monospace;
+  color: white;
+  margin: 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, .9) 1%, rgba(0, 0, 0, .8) 25%, rgba(0, 0, 0, .7) 50%);
+}
+#mainmenu {
+  height: 500px;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+}
+#contactMenu {
+  height: 500px;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+}
+#form {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form {
+  background-color: rgba(20, 0, 0, 0.5);
+  width: 100%;
+  height: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  list-style-type: none;
+  outline-style: groove;
+  outline-color: mediumaquamarine;
+  border: 2px solid mediumaquamarine;
+  box-shadow: 3px 3px mediumaquamarine;
+  padding: 50px;
+  text-align: center;
+}
+label {
+  font-size: 18px;
+}
+input {
+  padding: 5px;
+  margin: 10px;
+}
+/* Title */
+header {
+  display: block;
+  text-align: center;
+  opacity: 0.9;
+  font-size: 25px;
+  font-weight: 900;
+  text-shadow: 2px 2px black;
+  color: silver;
+  padding: 5px;
+}
+/* Main Menu */
+#menu {
+  display: block;
+  width: 90%;
+  height: 100%;
+  padding: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+li a {
+  background-color: slategrey;
+  opacity: 0.8;
+  width: 100%;
+  display: flex;
+  height: 90px;
+  align-cont: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 1, 199, 1.0);
+}
+#nav {
+  background-color: rgba(20, 0, 0, 0.5);
+  width: 100%;
+  height: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  list-style-type: none;
+  outline-style: groove;
+  outline-color: mediumaquamarine;
+  border: 2px solid mediumaquamarine;
+  box-shadow: 3px 3px mediumaquamarine;
+  padding-top: 50px;
+}
+#back {
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  display: flex;
+  align-cont: center;
+  justify-content: center;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-size: 25px;
+  text-shadow: 2px 2px 2px rgba(0, 1, 199, 1.0);
+}
+#submit {
+  background-color: mediumaquamarine;
+  color: grey;
+  text-shadow: 1px 1px black;
+  font-size: 14px;
+  font-stretch: ultra-expanded;
+}
+li a {
+  color: maroon;
+  text-decoration: none;
+  float: left;
+  font-weight: 900;
+  font-size: 2em;
+  text-shadow: 3px 15px 15px mediumaquamarine;
+}
+li a:hover {
+  color: #7eb9be;
+}
+/* Score Board */
+#scoreboard {}
+#names {}
+#player1 {}
+#player2 {}
+#scores {}
+#score1 {}
+#score2 {}
