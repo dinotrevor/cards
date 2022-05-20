@@ -1,2 +1,2 @@
 #Wilderness Warriors
-Wilderness Warriours
+Wilderness Warriors
