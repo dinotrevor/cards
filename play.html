@@ -16,7 +16,7 @@
     <!--<button id = "start" class = "button-64" role = "button" value ="submit" onclick = "multiply1()"><span class = "text">Start</span></button>-->
     <div id = "results" class = "results"></div>
   </header>
-    <main id="play">
+  <main id="play">
     <div id="hands">
       <div id="shows" style="display:block">
         <h2 id="title">Your Hand</h2>
@@ -25,6 +25,10 @@
 		  <hr/>
           <p id="def1" class="cardText"></p>
         </div>
+      </div>
+      <div id="shows3" style="display:none">
+        <div id="battle1"></div>
+		<div id="battle2"></div>
       </div>
       <div id="shows2" style="display:block">
         <h2 id="title2">Opponents Hand</h2>
@@ -42,7 +46,7 @@
       <button id = "start" class = "button-64" role = "button"
 				value ="submit" onclick = "multiply1()"> (Start)</button>
 				<button id = "new" class = "button-64" role = "button"
-				value ="submit" onclick = "multiply2()"> (Next)</button>
+				value ="submit" onclick = "multiply1()"> (Next)</button>
 
     </div>
     <div id="scoreboard">
@@ -56,8 +60,8 @@
   </footer>
 </div>
 	<script>
-var hp1 = 40;
-var hp2 = 40;
+	var hp1 = 40;
+	var hp2 = 40;
 	
 function multiply1() {
 	var att1 = document.getElementById("att1").innerHTML = Math.floor(Math.random() * 15) + 1;
@@ -70,9 +74,23 @@ function multiply1() {
 	var attack2;
 	var attack3;
 	var attack4;
+	var hp = 'HP';
 	
 
 	
+	
+	document.getElementById("show").className = 'show';
+	document.getElementById("show1").className = 'show1';
+	document.getElementById("shows3").style.display = "flex";
+	document.getElementById("battle1").innerHTML = oppAtt + hp;
+	document.getElementById("battle2").innerHTML = userAtt + hp;
+	if (hp1 <= 0) {
+	alert("Game over, you lost the game!");
+	}
+	
+	if (hp2 <= 0) {
+	alert("Game over, you won the game!");
+	}
 	if (userAtt > 0) {
 
 	var attack = hp2 -= userAtt;
@@ -92,101 +110,15 @@ function multiply1() {
 	document.getElementById("score2").innerHTML = attack4;
 	}
 	
-	document.getElementById("show").className = 'show';
-	document.getElementById("show1").className = 'show1';
 	
 	
-	
-	setTimeout(function(){
-	if (hp1 > hp2) {
-	alert("You won the battle!");
-	}
-	else {
-	alert("You lost the battle!");
-	}
-	},3000);
-	
+		
 	document.getElementById("new").style = "display:flex;";
 	document.getElementById("start").style = "display:none;";
 	
-	if (hp1 <= 0) {
-	alert("Game over, you lost the game!");
-	}
-	
-	if (hp2 <= 0) {
-	alert("Game over, you won the game!");
-	}
 	
 }
 
-function multiply2() {
-	var att1 = document.getElementById("att1").innerHTML = Math.floor(Math.random() * 15) + 1;
-	var def1 = document.getElementById("def1").innerHTML = Math.floor(Math.random() * 15) + 1;
-	var att6 = document.getElementById("att6").innerHTML = Math.floor(Math.random() * 15) + 1;
-	var def6 = document.getElementById("def6").innerHTML = Math.floor(Math.random() * 15) + 1;
-	var userAtt = att1 - def6;
-	var oppAtt = att6 - def1;
-	var attack;
-	var attack2;
-	var attack3;
-	var attack4;
-	
-	
-	if (userAtt > 0) {
-
-	var attack = hp2 -= userAtt;
-	document.getElementById("score2").innerHTML = attack;
-	}
-	else if (userAtt < 0) {
-	
-	var attack2 = hp1 += userAtt;
-	document.getElementById("score1").innerHTML = attack2;
-	}
-	if (oppAtt > 0) {
-	var attack3 = hp1 -= oppAtt;
-	document.getElementById("score1").innerHTML = attack3;
-	}
-	else {
-	var attack4 = hp2 += oppAtt;
-	document.getElementById("score2").innerHTML = attack4;
-	}
-	
-	document.getElementById("show").className = 'show';
-	document.getElementById("show1").className = 'show1';
-	
-	
-	
-	setTimeout(function(){
-	if (hp1 > hp2) {
-	alert("You won the battle!");
-	}
-	else if (hp1 < hp2) {
-	alert("You lost the battle!");
-	}
-	else {
-	alert("Tie");
-	}
-	},3000);
-	
-	document.getElementById("start").style = "display:flex;";
-	document.getElementById("start").innerHTML = "(New)";
-	document.getElementById("new").style = "display:none;";
-	
-		
-	if (hp1 <= 0) {
-	alert("Game over, you lost the game!");
-	}
-	//New Comments
-	
-	if (hp2 <= 0) {
-	alert("Game over, you won the game!");
-	}
-	
-}
-
-
-	
-	
 </script>
 </body>
 </html>
